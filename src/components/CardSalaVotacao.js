@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo';
+//import { LinearGradient } from 'expo';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Ionicons';
 import 'moment/src/locale/pt-br';
@@ -25,11 +25,14 @@ export default class CardSalaVotacao extends Component {
     }
   };
 
-  
+
 
   render() {
     const { status, mensagem, titulo, onPress } = this.props;
     const cores = this.getColor();
+
+    console.log(mensagem)
+
     return (
       <TouchableOpacity
         disabled={status == 'agendada' ? true : false}
@@ -37,8 +40,8 @@ export default class CardSalaVotacao extends Component {
         onPress={onPress}
       >
         <View style={styles.container}>
-          <LinearGradient
-            colors={cores}
+          <View
+            /*colors={cores}*/
             style={styles.content}>
             <View>
               <Text style={styles.titulo} numberOfLines={1} ellipsizeMode='tail'>
@@ -52,7 +55,7 @@ export default class CardSalaVotacao extends Component {
               name="ios-arrow-forward" size={18}
               color="#ffffff"
             />
-          </LinearGradient>
+          </View>
         </View>
       </TouchableOpacity>
     )
