@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo';
+// import { LinearGradient } from 'expo';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Ionicons';
 import 'moment/src/locale/pt-br';
 
-
-
 export default class CardSalaVotacao extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   getColor = () => {
@@ -37,7 +35,7 @@ export default class CardSalaVotacao extends Component {
         onPress={onPress}
       >
         <View style={styles.container}>
-          <LinearGradient
+          <View
             colors={cores}
             style={styles.content}>
             <View>
@@ -52,7 +50,7 @@ export default class CardSalaVotacao extends Component {
               name="ios-arrow-forward" size={18}
               color="#ffffff"
             />
-          </LinearGradient>
+          </View>
         </View>
       </TouchableOpacity>
     )

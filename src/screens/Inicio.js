@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Dimensions, AsyncStorage, Alert } from 'react-native';
+import { View, ScrollView, Dimensions, AsyncStorage, Alert, TouchableOpacity } from 'react-native';
 import { db } from '../config';
 let salasRef = db.ref('salas/');
 import BotaoNovaSala from '../components/BotaoNovaSala';
@@ -8,6 +8,9 @@ import SemSalas from '../containers/SemSalas';
 import CardSalaVotacao from '../components/CardSalaVotacao';
 import Barra from '../components/Barra';
 import getStatus from '../utils/getStatus';
+import Label from "react-native-material-textfield/src/components/label";
+import BotaoMedio from "../components/BotaoMedio";
+import Icon from "react-native-vector-icons/Ionicons";
 
 export default class Inicio extends Component {
   constructor(props) {
@@ -19,6 +22,16 @@ export default class Inicio extends Component {
   }
   static navigationOptions = {
     title: 'Votações disponíveis',
+    headerRight: <TouchableOpacity
+      onPress={ console.log('Teste!') }
+      style={{paddingRight: 24}}
+    >
+      <Icon
+      name={'md-trash'}
+      size={24}
+      color="#8400C5"
+    />
+    </TouchableOpacity>,
   };
 
 
