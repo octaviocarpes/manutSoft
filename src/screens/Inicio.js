@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Dimensions, AsyncStorage, Alert, TouchableOpacity } from 'react-native';
-import { db } from '../config';
+import { auth, db } from '../config';
+let usuariosRef = db.ref('usuarios/');
 let salasRef = db.ref('salas/');
 import BotaoNovaSala from '../components/BotaoNovaSala';
 import styles from '../styles/estilos';
@@ -23,7 +24,15 @@ export default class Inicio extends Component {
   static navigationOptions = {
     title: 'Votações disponíveis',
     headerRight: <TouchableOpacity
-      onPress={ console.log('Teste!') }
+      onPress= {
+        AsyncStorage.getItem('@UID').then((value) => {
+            usuariosRef.child(value).remove()
+          AsyncStorage.removeItem('@UID');
+            auth.currentUser.delete().then(
+              () => console.log("Usuário deletado!")
+            )
+          })
+      }
       style={{paddingRight: 24}}
     >
       <Icon
@@ -33,7 +42,6 @@ export default class Inicio extends Component {
     />
     </TouchableOpacity>,
   };
-
 
   componentWillMount() {
     salasRef.orderByChild("uid").on('value', snapshot => {
