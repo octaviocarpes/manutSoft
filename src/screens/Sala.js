@@ -179,8 +179,8 @@ export default class Sala extends Component {
       erroHoraFinal
     } = this.state;
     return (
-      <KeyboardAvoidingView style={styles.containerKeyboard}
-        behavior="padding" enabled keyboardVerticalOffset={120}>
+      // <KeyboardAvoidingView style={styles.containerKeyboard}
+        // behavior="padding" enabled keyboardVerticalOffset={120}>
         <ScrollView>
           <View style={styles.container}>
             <View>
@@ -250,7 +250,7 @@ export default class Sala extends Component {
           </View>
         </ScrollView>
 
-      </KeyboardAvoidingView>
+      //</KeyboardAvoidingView> 
 
     )
   }

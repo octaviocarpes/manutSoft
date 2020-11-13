@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "expo": "^35.0.0",
+    "expo-print": "^9.1.0",
+    "expo-sharing": "^8.4.1",
     "firebase": "^5.11.1",
     "moment": "^2.24.0",
     "react": "16.8.3",
