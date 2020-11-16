@@ -23,7 +23,7 @@ export default class CardSalaVotacao extends Component {
     }
   };
 
-  
+
 
   render() {
     const { status, mensagem, titulo, onPress } = this.props;
@@ -36,8 +36,19 @@ export default class CardSalaVotacao extends Component {
       >
         <View style={styles.container}>
           <View
-            colors={cores}
-            style={styles.content}>
+            // colors={cores}
+            // style={styles.content}
+            style={{
+              color: cores[1],
+              backgroundColor: cores[0],
+              width: "100%",
+              padding: 15,
+              borderRadius: 10,
+              minHeight: 85,
+              flexDirection: 'row',
+              justifyContent: 'space-between'
+            }}
+          >
             <View>
               <Text style={styles.titulo} numberOfLines={1} ellipsizeMode='tail'>
                 {titulo}
