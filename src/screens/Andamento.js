@@ -17,8 +17,8 @@ export default class Andamento extends Component {
       sala: [],
       encerrou: false
     }
-  }  
-  static navigationOptions = ({ navigation }) => ({     
+  }
+  static navigationOptions = ({ navigation }) => ({
     title: `Sala: ${navigation.state.params.sala.titulo}`,
   });
 
@@ -72,12 +72,12 @@ export default class Andamento extends Component {
             S22.066,27.002,16,27.002z"/><path d="M16.02,7.002c-0.001,0-0.001,0-0.002,0c-0.551,0-0.999,0.446-1,0.998l-0.015,7h-5.001c-0.552,0-1,0.448-1,1s0.448,1,1,1H16
             c0.551,0,0.999-0.446,1-0.998l0.018-7.998C17.019,7.452,16.572,7.003,16.02,7.002z"/></svg>
             <div>Votação encerrou em: ${getStatus(
-                sala.dataFinal,
-                sala.dataInicial,
-                sala.horaFinal,
-                sala.horaInicial,
-                true
-              )}
+        sala.dataFinal,
+        sala.dataInicial,
+        sala.horaFinal,
+        sala.horaInicial,
+        true
+      )}
             <div/>
           <div/>
           `
