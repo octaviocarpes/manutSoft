@@ -41,7 +41,7 @@ export default class Andamento extends Component {
   }
 
   compartilharAndamento = async (sala, andamento, encerrou) => {
-    const html = `
+    let html = `
         <div style="display:flex;align-itens:center;justify-content:center;text-align:center;font-size:14px">
           <div style="color:#00C551">Sala: ${this.state.sala.titulo}<div/>
           <div style="color:#8400C5"><b>${sala.descricao} <b><div/>
