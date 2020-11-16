@@ -17,8 +17,8 @@ export default class Andamento extends Component {
       sala: [],
       encerrou: false
     }
-  }
-  static navigationOptions = ({ navigation }) => ({
+  }  
+  static navigationOptions = ({ navigation }) => ({     
     title: `Sala: ${navigation.state.params.sala.titulo}`,
   });
 
