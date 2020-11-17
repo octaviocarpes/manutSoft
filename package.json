@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "expo": "^35.0.0",
+    "expo-print": "^9.1.0",
+    "expo-sharing": "^8.4.1",
     "firebase": "^5.11.1",
     "moment": "^2.24.0",
     "react": "16.8.3",
@@ -26,7 +28,11 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "babel-preset-expo": "^7.0.0",
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "^2.1.2",
     "schedule": "^0.4.0"
   },
   "private": true

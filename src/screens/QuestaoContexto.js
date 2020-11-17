@@ -109,7 +109,7 @@ export default class QuestaoContexto extends Component {
     const { loading, loaded, url, questoes } = this.state;
     return (
       <KeyboardAvoidingView style={styles.containerKeyboard}
-        behavior="padding" enabled keyboardVerticalOffset={120}>
+        behavior="height" enabled keyboardVerticalOffset={120}>
         <ScrollView>
           <View style={styles.container}>
             <View styles={styles.innerContainer}>

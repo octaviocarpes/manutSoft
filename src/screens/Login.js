@@ -10,7 +10,7 @@ export default class Login extends Component {
         super(props) 
         this.state = {
           salas: {},
-          email: 'email@id.com',
+          email: 'teste@teste.com',
           senha: '123456',
           errorMessage:''
         }      
@@ -41,7 +41,7 @@ export default class Login extends Component {
 
     render(){
       return(
-        <KeyboardAvoidingView style={styles.container} behavior="padding" enabled number="2">
+        <KeyboardAvoidingView style={styles.container} behavior="height" enabled number="2">
           <View style={styles.loginContainer}>
             <Image resizeMode="contain" style={styles.logo} source={require("../../assets/icon.png")} />
           </View>
@@ -71,7 +71,7 @@ export default class Login extends Component {
           </View>
           <View style={{flex: 3, backgroundColor: 'white'}}>
             <TouchableOpacity style={styles.loginButtonContainer} 
-              onPress={() => {this.setState({ errorMessage: 'Por favor, aguarde.' }), this.handleLogin()}}>
+              onPress={() => {this.setState({ errorMessage: 'Por favor, aguarde.' }); this.handleLogin()}}>
               <Text style={styles.loginButtonText}>Entrar</Text>
             </TouchableOpacity>
 

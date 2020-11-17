@@ -86,7 +86,7 @@ export default class TelaCadastro extends Component{
             size="large"
             color="#00DC7B"
         /> :
-        <KeyboardAvoidingView behavior={"padding"} style={styles.container} enabled number="2">   
+        <KeyboardAvoidingView behavior={"height"} style={styles.container} enabled number="2">   
             <View style={{flex: 1} [styles.flowButtonsContainer, { marginTop: 5 }]}> 
                 <Aviso texto={this.state.errorMessage} />
                 <InputTexto
