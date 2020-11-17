@@ -41,7 +41,7 @@ export default class Login extends Component {
 
     render(){
       return(
-        <KeyboardAvoidingView style={styles.container} behavior="padding" enabled number="2">
+        <KeyboardAvoidingView style={styles.container} behavior="height" enabled number="2">
           <View style={styles.loginContainer}>
             <Image resizeMode="contain" style={styles.logo} source={require("../../assets/icon.png")} />
           </View>
