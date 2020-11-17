@@ -71,7 +71,7 @@ export default class Login extends Component {
           </View>
           <View style={{flex: 3, backgroundColor: 'white'}}>
             <TouchableOpacity style={styles.loginButtonContainer} 
-              onPress={() => {this.setState({ errorMessage: 'Por favor, aguarde.' }), this.handleLogin()}}>
+              onPress={() => {this.setState({ errorMessage: 'Por favor, aguarde.' }); this.handleLogin()}}>
               <Text style={styles.loginButtonText}>Entrar</Text>
             </TouchableOpacity>
 

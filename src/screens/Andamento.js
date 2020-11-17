@@ -19,7 +19,7 @@ export default class Andamento extends Component {
     }
   }
   static navigationOptions = ({ navigation }) => ({
-    title: `Sala: ${navigation.state.params.sala.titulo}`,
+    title: `Sala: ${navigation.state.params.sala.titulo}`,    
   });
 
   componentWillMount() {
@@ -116,7 +116,7 @@ export default class Andamento extends Component {
           {sala.descricao}
         </Text>
         <View>
-          <StatusVotacao tipo="usuario" texto={`${this.getVotosRealizados() || 0}% dos usuários votaram`} />
+          <StatusVotacao tipo='usuario' texto={`${this.getVotosRealizados() || 0}% dos usuários votaram`} />
           <StatusVotacao tipo='hora' texto={
             encerrou ? 'Votação encerrou em: ' +
               getStatus(

@@ -41,10 +41,8 @@ export default Descricao;
 
 Descricao.propTypes = {
   texto: PropTypes.string,
-  texto: PropTypes.string
 }
 
 Descricao.defaultPropTypes = {
   texto: "",
-  texto: PropTypes.string.titulo,
 }

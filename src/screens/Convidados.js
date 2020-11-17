@@ -121,7 +121,7 @@ export default class Convidados extends Component {
         return false;
       });
 
-      const response_alternativas = await
+      const response_alternativas = 
       questoes.map((questao) => {
         db.ref('alternativas/').push({
           ...questao.alternativas
@@ -189,7 +189,7 @@ export default class Convidados extends Component {
     if (this.state.value) {
       return (
         <Text style={{
-          flex: 2/2,
+          flex: 1,
           textAlign: 'center',
           color: 'gray',
           fontSize: 18,
