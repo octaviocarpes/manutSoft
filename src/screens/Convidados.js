@@ -122,7 +122,7 @@ export default class Convidados extends Component {
       });
 
       const response_alternativas = 
-      questoes.map((questao) => {
+      questoes.map((questao) => (
         db.ref('alternativas/').push({
           ...questao.alternativas
         }).then(() => {
@@ -130,8 +130,8 @@ export default class Convidados extends Component {
         }).catch((error) => {
           console.warn('error ', error);
           return false;
-        });
-      });
+        })
+      ));
           
     if(response_sala && response_questoes && response_alternativas)
       return response_sala;

@@ -20,10 +20,11 @@ export default class Inicio extends Component {
       souAdm: false
     }
   }
-  static navigationOptions = {
+
+  static navigationOptions = ({ navigation }) => ({
     title: 'Votações disponíveis',
     headerRight: <TouchableOpacity
-      onPress={ console.log('Teste!') }
+      onPress={ ()=> navigation.navigate('Login', {}) }
       style={{paddingRight: 24}}
     >
       <Icon
@@ -32,7 +33,21 @@ export default class Inicio extends Component {
       color="#8400C5"
     />
     </TouchableOpacity>,
-  };
+  });
+
+  // static navigationOptions = {
+  //   title: 'Votações disponíveis',
+  //   headerRight: <TouchableOpacity
+  //     onPress={ ()=> navigation.navigate('Login', {}) }
+  //     style={{paddingRight: 24}}
+  //   >
+  //     <Icon
+  //     name={'md-trash'}
+  //     size={24}
+  //     color="#8400C5"
+  //   />
+  //   </TouchableOpacity>,
+  // };
 
 
   componentWillMount() {
